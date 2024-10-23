@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box1{
+    border: 10px solid black;
+    width: 50%;
+    /* 컨텐트박스의 너비를 box클래스의 부모태그의 너비 기준 50%로 정하겠다는 뜻(border나 padding을 포함하지 않은 컨텐트박스 기준) */
+}
+.box2{
+    margin-top: 50px;
+    border: 10px solid black;
+    width: 1000px;
+}
+.box2 section{
+    border: 10px solid saddlebrown;
+    width: 50%;
+    /* 부모인 box2클래스가 1000px이니까 section의 컨텐트박스 너비는 그의 50%인 500px. 테두리까지 합치면 520px */
+}
+.box3{
+    border: 10px solid black;
+    margin-top: 50px;
+    width: 800px;
+}
+.box3 section{
+    border: 10px solid darkgreen;
+    /* width: 100%; */
+    /* 부모태그의 너비만큼 적용하겠다는 것. 즉 border로 줄어드는 것을 고려하지 않고, 800px의 값을 갖겠다는 뜻이 됨. */
+    width: 50vw;
+    /* vw단위는 viewport(화면) width라는 뜻. 부모태그와 상관없이 화면너비에 반응 */
+    height: 30vh;
+    /* vh단위는 viewport height라는 뜻 
+    부모태그와 상관없이 화면높이에 반응*/
+}
+.box4{
+    border: 10px solid black;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.box5{
+    border: 10px solid black;
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 100%;
+    /* 컨텐트박스의 너비가 창의 너비(부모태그가 body태그이고, body태그의 기본값은 width: auto;이기 때문). 근데 거기에 border 10px, margin-left 100px을 줬기 때문에 가로스크롤이 120px만큼 생김 */
+}

@@ -1,0 +1,24 @@
+.wrap{
+    background: cornflowerblue;
+}
+
+@media (max-width: 1500px) {
+    *{color: white;}
+}
+
+@media (min-width: 1500px) {
+    /* 1500px보다 큰 경우 적용되는 스타일 */
+    .wrap{
+        background: lightpink;
+    }
+}
+/* @media (브레이크포인트 설정) {브레이크포인트에 도달했을 때 적용시킬 스타일} */
+/* min/max를 둘다 지정해주지 않고, max / min 둘 중 하나만 지정해서 사용할 경우 만약에 max-width가 1500px인 미디어쿼리에 어떤 스타일을 적용하면 1500px 이하인 모든 화면에 그 설정이 적용되는 것이 됨. 그래서 설정을 넣을때마다 생각하고 해야함 */
+/* 공통 미디어쿼리를 넣어도 됨 */
+
+@media (min-width: 1400px) and (max-width: 1499px){
+    /* 1400px~1499px 사이일 경우 적용되는 스타일 */
+    .wrap{
+        background: rgb(255, 171, 14);
+    }
+}

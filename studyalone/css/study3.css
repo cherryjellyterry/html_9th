@@ -1,0 +1,65 @@
+h1 {
+    text-align: center;
+  }
+  
+  .container {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
+  }
+  
+  .marker {
+    width: 200px;
+    height: 25px;
+    margin: 10px auto;
+  }
+  
+  .cap {
+    width: 60px;
+    height: 25px;
+  }
+  
+  .sleeve {
+    width: 110px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 10px double rgba(0, 0, 0, 0.75);
+    /* solid : 실선
+    double : 두줄 */
+  }
+  
+  .cap, .sleeve {
+    display: inline-block;
+  }
+  
+  .red {
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+    /* 
+    -> 뒤에 나오는 색깔은 최소 두가지.
+    90deg는 90도의 방향이라는 뜻(degree) => 기본값을 적용시 생략가능
+    디폴트 : 180deg(↓)
+    색깔 뒤에 퍼센테이지를 쓰면 그 색깔이 가는 지점을 정할 수 있음 */
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+    /* box-shadow: 5px 5px 5px 5px red
+    -> x축으로 5px, y축으로 5px, 블러 5px, 퍼짐정도 5px, 색상 red
+    -> box-shadow: offsetX offsetY blurRadius spreadRadius color; */
+  }
+  
+  .green {
+    background: linear-gradient(#55680D, #71F53E, #116C31);
+    box-shadow: 0 0 20px 0 #3B7E20CC;
+    /* #3B7E20CC
+    -> 이런식으로 rgba를 코드로도 표현가능 */
+  }
+  
+  .blue {
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 hsla(223,59%,31%,0.8);
+    /* hsla(223,59%,31%,0.8) 
+    -> rgba 말고도 alphavalue는 다른 코드에도 추가 가능 */
+  }
+  /* 
+  <투명도주기>
+  opacity: 0.5;
+  -> 투명도는 0(0%)부터 1.0(100%)까지 지정 가능 
+  background-color: rgba(255,255,255,50%);
+  -> 투명도 속성을 따로 두지 않고 background-color에 alphavalue를 추가해서 투명도를 줄수도 있음*/

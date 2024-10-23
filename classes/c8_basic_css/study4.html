@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일의 상속</title>
+    <style>
+        .frame{
+            color: green;
+        }
+        .parent{
+            color: red;
+        }
+        h3{
+            color: blue;
+        }
+        /* 우선순위점수가 밀렸더라도 상속스타일은 후순위로 밀림 */
+        /* 조부모도 상속하고, 부모도 상속했다면 부모거가 우선됨. 자기랑 가까운 관계 순으로 적용됨
+        (본인을 선택(우선순위점수 적용)>부모상속스타일(우선순위점수 없음)>조부모상속스타일(우선순위점수 없음)) */
+        .parent h3{color: aqua;}
+        div.parent h3 {
+            color: rgb(255, 0, 119);
+            font-size: 60px;
+            background: #ff9b00;
+            margin-bottom: 140px;
+            margin-left: 150px;
+            display: inline-block;
+            padding: 50px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: beige;">
+    <h1>스타일의 상속</h1>
+    <p>부모태그가 자식태그에게 스타일을 물려주는 행위</p>
+    <p>스타일의 상속은 언제나 일어나지 않는다 -> 모든 css 속성이 자식태그에게 상속되지는 않는다.</p>
+    <p>주로 글씨 색상과 크기 등 글씨와 관련된 css속성은 상속된다.</p>
+    <p>부모로부터 상속받는 상속스타일은 우선순위 점수와 관계없이 언제나 후순위로 밀린다.</p>
+
+    <div class="parent">
+        <h3>title</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ipsam cum quis ea voluptate alias, nemo molestias, impedit magnam deleniti sint veniam enim illo deserunt ducimus nobis minima consequuntur dolor?</p>
+        <div class="frame">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, mollitia. Cumque quos maxime quibusdam, error porro odit sed aliquam et fugiat illum, sunt exercitationem in illo autem ab officia! Nihil?</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face{
+    font-family: "풀무원";
+    src: url(../font/PulmuoneLOHASBold.woff);
+}
+.header{
+    height: 250px;
+    /* background-color: black;
+    background-image: url(../img/sub_vis01_02.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto;  */
+    background: rgb(0, 0, 0) url(../img/sub_vis01_02.jpg) no-repeat 50% 50% /cover;
+}
+.center{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.font1{
+    font-family: "Noto Sans KR", sans-serif;
+}
+.font2{
+    font-family: "풀무원";
+}
+.title{
+    margin-top: 50px;
+    white-space: nowrap;
+    background: white url(../img/sub_tit_line.gif) repeat-x left center /auto;
+}
+/* .top{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+} */
+h2{
+    background-color: white;
+    font-size: 30px;
+    font-weight: 400;
+    display: inline-block;
+}
+.subtitle{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    width: 1200px;
+    box-sizing: border-box;
+}
+h3{
+    font-size: 52px;
+}
+.green{
+    color: #7EAE4B;
+}
+/* div.center{
+    margin-left: 360px;
+    margin-right: 360px;
+} */
+.explain{
+    padding: 40px 90px 50px 90px;
+    text-align: center;
+    background-color: #F4F4F4;
+    margin-left: auto;
+    margin-right: auto;
+    width: 810px;
+    box-sizing: border-box;
+}
+h4{
+    font-size: 35px;
+    font-weight: 400;
+}
+.b{
+    font-size: 19px;
+}
+.c{
+    margin-top: 25px;
+}
+.d{
+    margin-top: 30px;
+}

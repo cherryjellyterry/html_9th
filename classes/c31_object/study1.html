@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 형태 객체(사물) - object</title>
+</head>
+<body>
+    <h1>객체 - object</h1>
+    <p>자바스크립트에서 사물을 나타낼 때 사용하는 표현</p>
+    <p>객체는 ,를 사용하여 프로퍼티를 입력할 수 있다.</p>
+    <p>그리고 각각의 프로퍼티는 :(콜론)을 사용하여 key : value 형태로 구성되어 있다.</p>
+    <p>여기서 key값을 사용하여 저장된 value 값을 가져올 수 있다. key값은 객체 안에 속해있는 변수처럼 활용된다.</p>
+    <script>
+        let person1 = ["정현진", 44, "남자"]
+        person1[0]
+        let person2 = {
+            name:"정현진", 
+            age:44, 
+            gender:"남자",
+            hobbies:["어항관리", 
+            "고양이관리"],
+            score: {ko:90, en:100, ma:99}
+        }
+        person2["name"]
+        person2.name
+        person2.age
+        person2["hobbies"][0]
+        person2.hobbies[0]
+        person2.score.ko
+
+        let classmates = [
+        {
+            name:"정현진", 
+            gender:"남자", 
+            age:44, 
+            marry:false, 
+            hobby:["어항관리","고양이관리","러닝"]
+        },
+        {
+            name:"이지은", 
+            gender:"여자", 
+            age:27, 
+            marry:true, 
+            hobby:["요리", "영화", "쇼핑"]
+        },
+        {
+            name:"김리희", 
+            gender:"여자", 
+            age:27, 
+            marry:false, 
+            hobby:["캠핑", "여행"]
+        },
+        {
+            name:"이미연", 
+            gender:"여자", 
+            age:25, 
+            marry:false, 
+            hobby:["연극보기", "운동"]
+        },
+        {
+            name:"고이준", 
+            gender:"여자", 
+            age:23, 
+            marry:false, 
+            hobby:["노래듣기", "산책하기", "여행", "요리하기"]
+        },
+        {
+            name:"김정민", 
+            gender:"여자", 
+            age:29, 
+            marry:false, 
+            hobby:["뮤지컬보기", "맛집탐방하기", "전시회보기"]
+        },
+        {
+            name:"송지혜", 
+            gender:"여자", 
+            age:26, 
+            marry:false, 
+            hobby:["노래듣기", "여행가기", "운동", "드라마보기", "드라이브"]
+        },
+        {
+            name:"박소연", 
+            gender:"여자", 
+            age:29, 
+            marry:false, 
+            hobby:["요리하기", "영화보기", "운동"]
+        },
+        {
+            name:"서유담", 
+            gender:"여자", 
+            age:27, 
+            marry:false, 
+            hobby:["산책하기", "영상보기", "인터넷쇼핑"]
+        },
+        {
+            name:"문진아", 
+            gender:"여자", 
+            age:32, 
+            marry:false, 
+            hobby:["영화보기", "카페가기", "서점구경하기", "유튜브보기"]
+        },
+        {
+            name:"안태리", 
+            gender:"여자", 
+            age:26, 
+            marry:false, 
+            hobby:["유튜브보기", "잠자기", "여행가기", "드라마보기"]
+        },
+        {
+            name:"정동익", 
+            gender:"남자", 
+            age:37, 
+            marry:false, 
+            hobby:["산책하기", "게임하기", "유튜브보기", "맛집탐방", "여행하기"]
+        }
+        ]
+    </script>
+    <!-- <ul class="classmate">
+        <li>정현진</li>
+        <li>이지은</li>
+        <li>김리희</li>
+        <li>이미연</li>
+        <li>고이준</li>
+        <li>김정민</li>
+        <li>송지혜</li>
+        <li>박소연</li>
+        <li>서유담</li>
+        <li>문진아</li>
+        <li>안태리</li>
+        <li>정동익</li>
+    </ul> -->
+
+    <script>
+        // document.write(`
+        // <ul class="classmate">
+        // <li>${classmates[0].name}</li>
+        // <li>${classmates[1].name}</li>
+        // <li>${classmates[2].name}</li>
+        // <li>${classmates[3].name}</li>
+        // <li>${classmates[4].name}</li>
+        // <li>${classmates[5].name}</li>
+        // <li>${classmates[6].name}</li>
+        // <li>${classmates[7].name}</li>
+        // <li>${classmates[8].name}</li>
+        // <li>${classmates[9].name}</li>
+        // <li>${classmates[10].name}</li>
+        // <li>${classmates[11].name}</li>
+        // </ul>
+        // `)
+        for(i=0;i<12;i++){
+            document.write(`
+            <ul class="classmate">
+                <li>${classmates[i].name}</li>
+            </ul>
+            `)
+        }
+    </script>
+</body>
+</html>

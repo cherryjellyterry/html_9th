@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+.station{
+    font-weight: bold;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    /* 가로스크롤 없애기 */
+    position: fixed;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    transform: rotate(45deg) scale(2);
+}
+
+
+.train{
+    width: 200%;
+    /* border: 1px solid blue; */
+    display: flex;
+}
+
+.train li{
+    /* border: 1px solid green; */
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    /* 혹시라도 글자 삐져나올까봐 */
+}
+
+.a{
+    animation: ribbonA 20s linear -10s infinite;
+    font-size: calc(100vw / 8);
+}
+
+.b{
+    /* border: 1px solid blue; */
+    animation: ribbonB 20s linear 0s infinite;
+    display: flex;
+    height: calc(100vw / 6);
+    background: url(../img/pngwing.com\ \(9\).png) no-repeat 50% 0% /contain;
+    width: 100vw;
+}
+
+.b img{
+    /* border: 1px solid red; */
+    height: calc(100vw / 8);
+    object-fit: contain;    
+}
+
+@keyframes ribbonA {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes ribbonB {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+/* 원래 이 태그가 어디있었는지 생각해야함. 이 태그는 화면 밖에 있었기 때문에 자기 자리에서 시작해도 화면 밖임. 대신 화면밖의 자리에 있었기 때문에 왼쪽 끝으로 사라지기 위해서는 자기 너비의 2배만큼 왼쪽으로 이동해야함. */
+/* B가 출발하는 것은 딜레이를 5초만큼 줘야 뒤에 바로 붙어서 쫓아갈수가 있음. */

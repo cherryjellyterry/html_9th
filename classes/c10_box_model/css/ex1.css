@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* css에서는 수치가 0인 경우에 한해서 단위를 생략할 수 있다. */
+}
+#container{
+    border: 10px solid black;
+    width: 1200px;
+}
+.a{
+    background: red;
+    width: 500px;
+    height: 300px;
+}
+.b{
+    background: orange;
+    width: 500px;
+    height: 200px;
+    border: 10px solid lime;
+}
+.c{
+    width: 500px;
+    height: 150px;
+    background: green;
+    border: 10px solid aqua;
+    box-sizing: border-box;
+}
+
+
+
+/* 
+A(a클래스의 컨텐트박스 높이): 300px
+B(b클래스의 테두리 포함 박스 높이): 220px
+C(c클래스의 컨텐트 박스 높이): 130px
+D(container의 테두리 포함 박스 높이): 690px
+E(b클래스의 컨텐트 박스 너비): 500px
+
+
+1840 */

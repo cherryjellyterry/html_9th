@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 / 상수</title>
+    <!-- 나이 : 변수. 상수 : 상수 -->
+</head>
+<body>
+    <h1>변수</h1>
+    <p>변할 가능성이 있는 수</p>
+    <p>데이터가 저장되는 기억공간</p>
+    <ol>
+        <li>변수를 생성(선언)한다.</li>
+        <li>생성된 변수에 값을 대입(변수에 최초로 값을 대입하는 것을 특별히 초기화하는 과정이라고 말한다.)</li>
+    </ol>
+    <p>변수를 최초로 만들 때 let이라는 키워드를 쓴다.</p>
+    <p>변수를 불러와서 새로운 값을 대입하면 기존에 있던 값은 사라진다.</p>
+    <p>변수는 똑같은 이름을 만들 수 없다.</p>
+    <p>변수 이름은 영 소문자로 한다. 숫자로 시작하면 안됨. 특수문자 안됨.(_은 됨) 띄어쓰기 안됨.</p>
+
+    <script>
+        let name
+        // 변수만들기
+        name
+        // 변수 불러오기
+        name="안태리"
+        // 변수 저장하기
+        // let name="안태리"
+        // 보통 이렇게 씀
+        let name_1 = "안태리"
+        // let name-1 = "안태리"
+        // 안됨
+       
+        let age=26
+        age = 23
+        // 밑에 있는 값이 적용됨
+        // let age
+        // age=26
+        // alert(name)
+        // "안태리"라고 나옴
+        // alert(name+"님 안녕하세요")
+        // alert(name+"님은 "+age+"살입니다.")
+
+        let user_name = prompt("당신의 이름을 입력해주세요.")
+        document.write("<h3>"+user_name+"님 반갑습니다.</h3>")
+        let user_age = Number(prompt(user_name+"님의 나이를 입력해주세요."))
+        document.write("<h3>"+user_name+"님은 현재 "+user_age+"살이군요. 그렇다면 5년 뒤에는 "+(user_age+5)+"살이 되겠군요.")
+    </script>
+
+    
+    <h1>상수</h1>
+    <p>변하지 않는 수</p>
+    <p></p>
+
+    <p>예: 성별이 남자라면 성별이 변수. 남자라는 것이 상수</p>
+
+    <script></script>
+</body>
+</html>

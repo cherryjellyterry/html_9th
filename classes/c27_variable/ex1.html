@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표 예제</title>
+    <link rel="stylesheet" href="./css/ex1.css">
+</head>
+<body>
+    <!-- <p>사용자에게 이름과 국어, 영어, 수학, 사회, 과학 다섯 과목의 점수를 각각 물어보고 입력한 점수의 합산점수와 평균값을 구하여 성적표 양식을 만들어주는 페이지를 제작해보자.</p> -->
+    <!-- 백틱을 사용했을 경우에만 `++` 대신 ${} 사용 가능 -->
+
+    <script>
+        let name = prompt("이름을 입력하세요.")
+        let kor = Number(prompt("국어점수를 입력하세요"))
+        let eng = Number(prompt("영어점수를 입력하세요"))
+        let math = Number(prompt("수학점수를 입력하세요"))
+        let soc = Number(prompt("사회점수를 입력하세요"))
+        let sci = Number(prompt("과학점수를 입력하세요"))
+        let n = 2
+        let pow = Math.pow(10,n)
+        let plus = Math.round(kor+eng+math+soc+sci).toFixed(2)
+        // .toFixed(2) 소수점 셋째자리에서 반올림하는 함수 
+        let aver = (Math.round((kor+eng+math+soc+sci)/5*pow))/pow
+        // 소수점 셋째자리에서 반올림
+        document.write(`
+            <div class="score">
+                <h2>성적표</h2>
+                <p class="name">이름 : `+name+`</p>
+                <table class="score_table">
+                    <tr>
+                        <th>국어</th>
+                        <th>영어</th>
+                        <th>수학</th>
+                        <th>사회</th>
+                        <th>과학</th>
+                    </tr>
+                    <tr>
+                        <td>`+kor+`점</td>
+                        <td>`+eng+`점</td>
+                        <td>`+math+`점</td>
+                        <td>${soc}점</td>
+                        <td>${sci}점</td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">합산점수</th>
+                    </tr>
+                    <tr>
+                        <td colspan="5">`+plus+`점</td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">평균</th>
+                    </tr>
+                    <tr>
+                        <td colspan="5">`+aver+`점</td>
+                    </tr>
+                </table>
+                <p>${name} 학생의 평균점수는 `+aver+`점입니다.</p>
+            </div>
+        `)
+    </script>
+
+    <!-- 백틱을 사용했을 경우에만 `++` 대신 ${} 사용 가능 -->
+    
+    <!-- <div class="score">
+        <h2>성적표</h2>
+        <p class="name">이름 : 안태리</p>
+        <table class="score_table">
+            <tr>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+                <th>사회</th>
+                <th>과학</th>
+            </tr>
+            <tr>
+                <td>100점</td>
+                <td>90점</td>
+                <td>100점</td>
+                <td>90점</td>
+                <td>100점</td>
+            </tr>
+            <tr>
+                <th colspan="5">합산점수</th>
+            </tr>
+            <tr>
+                <td colspan="5">480점</td>
+            </tr>
+            <tr>
+                <th colspan="5">평균</th>
+            </tr>
+            <tr>
+                <td colspan="5">96점</td>
+            </tr>
+        </table>
+        <p>안태리 학생의 평균점수는 96점입니다.</p>
+    </div> -->
+</body>
+</html>

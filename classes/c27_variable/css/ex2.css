@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 20px;
+}
+
+ul, dl{
+    list-style: none;
+}
+
+.innerContent{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.info h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.box{
+    background-color: powderblue;
+    padding: 1rem;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 800px;
+}
+.bmi, .result{
+    width: 400px;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.bmi h2, .result h2{
+    margin-bottom: 1rem;
+}
+
+.bmi h3{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bmi ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+dl{
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+dt{
+    font-weight: 500;
+    background-color: moccasin;
+    border-radius: 1rem;
+}
+
+.bmi div p{
+    font-size: 1.2rem;
+}
+
+.bmi div p span{
+    color: red;
+    font-weight: 600;
+}
+
+.result ul li h6{
+    font-size: 1rem;
+    background-color: rgb(243, 211, 255);
+    border-radius: 1rem;
+    font-weight: 500;
+}
+
+.result ul li{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+}
+
+.result ul li:last-of-type{
+    margin-bottom: 0;
+}

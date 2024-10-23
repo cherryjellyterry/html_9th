@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    height: 56px;
+    background-color: pink;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* right: 0; */
+    /* width 대신 right 써도 됨 둘이 같이 쓰면 둘다 충족시키기 위해서 늘어나게 됨 이렇게 하면 padding을 box-sizing 따로 안하고도 적용됨 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+header>div{
+    background-color: wheat;
+    height: 24px;
+}
+.logo{
+    width: 170px;
+    display: flex;
+}
+.logo>div>a>img{
+    height: 20px;
+}
+.account{
+    width: 225px;
+}
+.search{
+    width: 730px;
+}
+aside{
+    width: 240px;
+    background-color: plum;
+    height: calc(100vh - 56px);
+    position: fixed;
+    top: 56px;
+    left: 0;
+    overflow: auto;
+}
+.category{
+    height: 56px;
+    background-color: rgb(255, 147, 188);
+    position: fixed;
+    top: 56px;
+    left: 240px;
+    width: calc(100% - 240px);
+}
+main{
+    background-color: palevioletred;
+    min-height: 200vh;
+    margin-left: 240px;
+    margin-top: 112px;
+    /* width: calc(100% - 240px);
+    position: relative;
+    left: 240px;
+    padding-top: 112px;
+    z-index: -1; */
+    padding: 16px;
+}
+
+aside>div{
+    min-height: 150px;
+    background-color: lemonchiffon;
+    border-bottom: 1px solid #a0a0a0;
+    padding: 12px;
+}
+aside>div>section{
+    min-height: 150px;
+    background-color: lightblue;
+    border-bottom: 1px solid gray;
+    margin-bottom: 12px;
+}
+aside>div>section:last-of-type{
+    border-bottom: none;
+    margin-bottom: 0;
+}
+/* 나중에 이 div 안에 추가적으로 몇개 더 들어가게 될 경우에 수정하기 쉽게 하기 위함. 전체 스타일로 적용하고 마지막 태그는 안쓴다고 따로 설정. */
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    background-color: royalblue;
+}
+.title{
+    font-size: 20px;
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+}
+.normalVideo ul li{
+    background-color: lemonchiffon;
+    height: 340px;
+    width: calc((100% - 16px*(4 - 1))/4);
+    margin-right: 16px;
+    margin-bottom: 32px;
+}
+.normalVideo ul li:nth-of-type(4n){
+    margin-right: 0;
+}
+.normalVideo ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.normalVideo ul li:nth-last-of-type(1),
+.normalVideo ul li:nth-last-of-type(2),
+.normalVideo ul li:nth-last-of-type(3),
+.normalVideo ul li:nth-last-of-type(4){
+    margin-bottom: 0;
+}
+.video{
+    width: 90%;
+    margin: 10px 5%;
+}

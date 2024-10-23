@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 1280px;
+    height: 215px;
+    background-color: lightblue;
+    margin: 0 auto;
+}
+main{
+    width: 1280px;
+    min-height: 300px;
+    /* 아직 무슨 내용이 들어갈지 모르니까 일단 최소 높이만 지정 */
+    background-color: rgb(253, 199, 226);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+}
+.left{
+    background-color: hotpink;
+    flex-basis: 830px;
+}
+.left>div{
+    margin-bottom: 16px;
+    background-color: chocolate;
+}
+.left>div:last-of-type{
+    margin-bottom: 0;
+}
+.a{
+    height: 130px;
+}
+.b{
+    height: 426px;
+}
+.c{
+    height: 560px;
+}
+.d{
+    height: 858px;
+}
+.right{
+    background-color: violet;
+    flex-basis: 420px;
+}
+.right>div{
+    margin-bottom: 16px;
+    background-color: tomato;
+}
+.right>div:last-of-type{
+    margin-bottom: 0;
+}
+.e{
+    height: 164px;
+}
+.f{
+    height: 240px;
+}
+.g{
+    height: 80px;
+}
+.h{
+    height: 172px;
+}
+.i{
+    height: 236px;
+}
+.j{
+    height: 236px;
+}
+.k{
+    height: 240px;
+}
+.l{
+    height: 516px;
+}
+.m{
+    height: 80px;
+}
+footer{
+    /* 배경색은 줘야 하는데, width를 100%나 vw로 주면 컨텐트박스도 커지므로 그냥 기본값 auto로 놔두기 */
+    height: 430px;
+    background-color: rgb(223, 223, 223);
+    padding: 30px 0 78px;
+    box-sizing: border-box;
+}
+.innerfooter{
+    width: 1280px;
+    margin: 0 auto;
+    background-color: rgb(163, 250, 163);
+}

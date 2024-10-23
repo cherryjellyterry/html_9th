@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap1{
+    border: 5px solid #000000;
+    width: 1200px;
+    margin: 0 auto;
+    /* 중앙에 배치되게 됨.(가변여백/고정컨테이너) */
+}
+.wrap2{
+    border: 5px solid #000000;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    /* 중앙에 배치되게 됨.(가변여백/가변컨테이너) */
+}
+.wrap3{
+    border: 5px solid #000000;
+    margin: 0 20px;
+    margin-top: 50px;
+    /* 중앙에 배치되게 됨.(고정여백/가변컨테이너) */
+}

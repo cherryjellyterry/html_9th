@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.frame_wrap{
+    border-top: 10px solid black;
+    /* 위 테두리 10 */
+    border-bottom: 10px solid black;
+    /* 밑 테두리 10 */
+    padding: 20px 30px;
+    /* 테안여백 상하 20 좌우 30 */
+    width: 1000px;
+    /* 너비 1000 */
+}
+.common_frame{
+    border-bottom: 1px solid #555;
+    /* 1번만 div 하단에 1px 테두리 */
+    padding: 20px;
+    /* 1번 2번 div 테안여백 상하좌우 20px(1번 상 빼고) 
+    1번 div 테안여백 상 30px*/
+}
+.frame_1{
+    padding-top: 30px;
+}
+.common_frame.frame_2{
+    border: none;
+}
+.a{
+    padding: 10px 0;
+    /* a섹션 테안여백 위아래 10 좌우 0 */
+    background-color: salmon;
+    height: 150px;
+    /* a섹션 컨박 높이 150 */
+}
+.b{
+    background-color: sandybrown;
+    box-sizing: border-box;
+    height: 200px;
+    /* b섹션 전체 높이 200 */
+    border: 10px solid seagreen;
+    /* b섹션 테두리 10 */
+}
+.c{
+    background-color: saddlebrown;
+    height: 250px;
+    /* c섹션 전체높이 250 */
+    padding: 10px;
+    /* c섹션 테안여백 10 */
+    border: 10px solid violet;
+    /* c섹션 테두리 10 */
+    box-sizing: border-box;
+}
+
+
+/* 
+    A: frame_wrap클래스의 테두리를 포함한 박스너비
+    1060
+    B: a클래스의 테두리를 포함한 박스높이
+    150+20=170
+    C: b클래스의 컨텐트박스의 높이
+    200-20=180
+    D: c클래스의 테두리를 포함한 박스의 높이
+    250
+    E: frame_1클래스의 테두리를 포함한 박스의 높이
+    30+170+200+20+1 = 421
+    F: frame_2클래스의 테두리를 포함한 박스의 높이
+    250+20+20=290
+    A+B+C+D+E+F ? 2371
+*/

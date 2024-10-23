@@ -1,0 +1,19 @@
+@font-face {
+    font-family: '잘난';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    /* font-weight이랑 font-style은 지워도 됨. */
+}
+.font1{
+    font-family: "잘난";
+}
+.qwitcher{
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+/* css 데려올때는 굵기지정 안할거면 font-family 부분만 긁어와도 됨 */
+.font2{
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+}

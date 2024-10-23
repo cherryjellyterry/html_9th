@@ -1,0 +1,43 @@
+:root{
+    /* 변수를 만드는 곳 */
+    --maincolor:rgb(255, 142, 142);
+    /* 변수 만들 때는 앞에 --원하는 이름 */
+}
+
+.box{
+    border: 10px solid var(--maincolor);
+    /* var(변수이름) */
+    width: 400px;
+    height: 400px;
+    /* transition-property: all;
+    transition-duration: 400ms;
+    transition-timing-function: linear;
+    transition-delay: 0s; */
+    transition: all 400ms linear 0s;
+}
+
+.box:hover{
+    width: 600px;
+    height: 600px;
+    background-color: red;
+}
+
+.box2{
+    border: 10px solid var(--maincolor);
+    width: 400px;
+    height: 400px;
+    /* transition-property: width, height, background-color;
+    transition-duration: 400ms, 1s, 0.8s;
+    transition-timing-function: linear, ease, linear;
+    transition-delay: 0s, 0.4s, 1.4s; */
+    transition:
+    width 0.4s linear 0s,
+    height 0.4s ease 0.4s,
+    background-color 0.4s linear 0.8s
+}
+
+.box2:hover{
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+}

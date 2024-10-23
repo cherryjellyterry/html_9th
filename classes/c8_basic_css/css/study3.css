@@ -1,0 +1,76 @@
+p{
+    color: red;
+}
+div p{
+    /* 띄어쓰기 : div태그 안에 포함된 "자손"들 중에서 모든 p태그들을 선택한다는 뜻(본인은 미포함) */
+    color: blue;
+}
+/* 태그명 1점 + 태그명 1점 = 2점 */
+div>p{
+    /* > : div 태그 안에 포함된 "자식"들 중에서 모든 p 태그들을 선택한다는 뜻(본인은 미포함) */
+    color: green;
+}
+.box>p{
+    color: purple;
+}
+/* 태그명 1점 + 클래스명 10점 = 11점 */
+div ul li p{
+    color: green;
+}
+.box li>p{
+    color: orange;
+}
+
+/* #a.b -> 아이디가 a이고 클래스가 b인 태그 1개 */
+/* #a .b -> 아이디가 a인 태그의 자손들 중에 클래스가 b인 모든 태그(여러개) */
+
+.list1~li{
+    background: pink;
+}
+/* ~ : list1 클래스의 동생 태그들 중에서 li 태그들을 선택한다는 뜻(본인을 포함하거나 형 태그를 선택할 수는 없음) */
+.list1+li{
+    background: blue;
+}
+/* + : list1 클래스의 동생 태그 중에서 바로 밑 동생만 선택한다는 뜻 */
+.box2>h3:nth-child(3){
+    color: red;
+}
+/* box2클래스의 자식태그 중 3번째 자식인 h3태그를 선택한다는 뜻(3번째 자식이 h3태그가 아니면 선택 안됨) */
+/* 몇번째 자식인지, 그 자식이 해당 태그인지 정확히 지정되어야만 함*/
+/* 우선순위점수 클래스 10점 + 태그명 1점 = 11점(nth-child는 점수 카운트 안됨) */
+.box2>h3:nth-of-type(3){
+    color: blue;
+}
+/* box2클래스의 자식태그인 h3태그 중 3번째 자식을 선택한다는 뜻(h3태그끼리만 카운트) */
+/* 우선순위점수 클래스 10점 + 태그명 1점 = 11점(nth-of-type은 점수카운트 안됨) */
+.list_box>li:nth-of-type(2n){
+    font-size: 3rem;
+}
+.list_box>li:nth-of-type(2n-1){
+    text-decoration: underline;
+}
+.list_box>li:nth-of-type(3n+1){
+    color: red;
+}
+/* 짝수번째만 선택할 땐 2n, 홀수번째만 선택할 땐 2n+1/2n-1, 이걸 활용해서 수식을 통해 3n-2, 4n 등 다양하게 사용 가능 */
+.list_box>li:nth-of-type(3),
+.list_box>li:nth-of-type(4),
+.list_box>li:nth-of-type(5){
+    color: rgb(9, 255, 0);
+}
+/* 수식으로 표현 안되는 여러개는 이렇게 선택해야 함 */
+a[target="_blank"]{
+    background: #000;
+    color: #fff;
+}
+/* a태그에 스타일 입힐 때 a[] 열고, 그 안에서 어떤 속성을 가진 태그를 선택할건지에 대해 입력. */
+a[href="https://www.naver.com"]{
+    color: #aaa;
+    text-decoration: line-through;
+    /* 취소선 스타일 */
+    pointer-events: none; 
+    /* 클릭이 안되게 함 */
+}
+p[data-terry="태리설명"]{
+    font-style: italic;
+}

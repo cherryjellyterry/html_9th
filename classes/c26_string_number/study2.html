@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표준 도구(함수) 모음</title>
+</head>
+<body>
+    <h1>브라우저에 내장되어 있는 기본 함수</h1>
+
+    <hr>
+
+    <h2>String()</h2>
+    <p>숫자데이터를 문자데이터로 변환하여 남기는 함수</p>
+    <script>
+        String(200)
+        // "200"이 됨
+        // console.log(String(200)+49)
+        // console.log(String(300).length+20)
+
+    </script>
+
+    <h2>Number()</h2>
+    <p>문자데이터를 숫자데이터로 변환하여 남기는 함수</p>
+
+    <script>
+        console.log(Number("300")+30)
+        console.log(Number(String(200)+10)+50)
+    </script>
+
+    <h2>typeof()</h2>
+    <p>괄호 안에 데이터의 형태를 검사한 결과값(문자데이터 형태)을 함수가 사용된 자리에 남기는 함수</p>
+
+    <script>
+        // console.log(typeof("안태리".length + "안녕하세요".length))
+        console.log(typeof(typeof(200)))
+        // =string
+        console.log(typeof(2345))
+        // =number
+        console.log(typeof"2345")
+        // =string
+        console.log("string"[3])
+        // =i
+    </script>
+
+    <h2>prompt()</h2>
+    <p>홈페이지 사용자에게 괄호안의 질문을 한 후 사용자가 입력한 대답을 함수가 사용되었던 자리에 문자데이터 형태로 남겨주는 함수</p>
+
+    <script>
+        // prompt("당신의 이름을 입력해주세요")
+        // 여기에 뭘 입력하면 이 자리에 그 값이 남음. "안태리" 이런식으로
+        document.write("<h2>"+prompt("당신의 이름을 입력해주세요")+"님 환영합니다.</h2>")
+        document.write("<p>"+"당신의 나이가 "+prompt("당신의 나이를 입력해주세요")+"살이군요. 10년 뒤에는 그럼 "+ (Number(prompt("당신의 나이를 입력해주세요"))+10) +"살이 되시겠네요.</p>")
+        // prompt("당신의 나이를 입력해주세요")
+        // (Number(prompt("당신의 나이를 입력해주세요"))+10) 괄호를 쳐야 계산이 됨. 왼쪽에서 오른쪽으로 읽기 때문에 숫자가 먼저 더해지는게 아니고 앞의 숫자가 먼저 문자열과 합쳐지면서 숫자가 다시 문자데이터로 바뀜. 그래서 먼저 계산되게 괄호를 쳐줘야 함
+    </script>
+</body>
+</html>

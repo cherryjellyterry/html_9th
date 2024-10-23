@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: black;
+    /* height: 120px; */
+}
+.header_top{
+    height: 48px;
+    background-color: #555;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    /* 윗헤더를 세로축 기준 중앙에 오게 하기 위함 */
+}
+.topMenu{
+    list-style: none;
+    /* ul태그 속 땡땡이 없애기 */
+    display: flex;
+    justify-content: flex-end;
+}
+.topMenu li{
+    margin: 0 10px;
+}
+.topMenu li a{
+    text-decoration: none;
+    color: black;
+}
+.header_bottom{
+    height: 72px; 
+    background-color: #aaa;
+
+    display: flex;
+    align-items: center;
+}
+.innerContent{
+    width: 1344px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+.conA{
+    height: 1217px;
+    background-color: olive;
+}
+.conB{
+    height: 492px;
+    background-color: tomato;
+}
+.conC{
+    height: 1116px;
+    background-color: chocolate;
+}
+.conD{
+    height: 594px;
+    background-color: #785;
+}
+.conE{
+    height: 518px;
+    background-color: lightcoral;
+}
+footer{
+    height: 704px;
+    background-color: firebrick;
+}

@@ -1,0 +1,31 @@
+.box{
+    border: 5px solid black;
+    width: 400px;
+    height: 400px;
+    box-sizing: border-box;
+}
+.box1{
+    border-radius: 200px;
+    box-shadow: 20px 20px 10px rgb(155, 76, 76);
+}
+.box2{
+    border-radius: 50%;
+    /* 너비 높이값의 50% */
+    box-shadow: 
+    20px 20px 0px orangered, 
+    -20px -20px 0px blue;
+    /* ,로 구분해서 2개 이상의 그림자를 쓸 수도 있음 */
+}
+.box3{
+    border-radius: 50px 100px;
+    /* 좌상단, 우하단 -> 50px 우상단, 좌하단 -> 100px */
+    background-color: red;
+    /* opacity: 0; */
+    /* 투명할 뿐 그만큼의 공간차지는 하고 있음 */
+    display: none;
+    /* 태그가 없어지는 거나 마찬가지임. 공간차지도 하지 않음. */
+}
+.box4{
+    border-radius: 0px 50px 100px 150px;
+    /* 시계방향으로 좌상단부터 */
+}

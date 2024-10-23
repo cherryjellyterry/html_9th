@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font - 글씨 관련 css</title>
+    <link rel="stylesheet" href="./css/study1.css">
+</head>
+<body>
+    <h1>font</h1>
+    <ul>
+        <li class="a">
+            <h2>font-size</h2>
+            <p>글씨의 크기를 지정하는 속성</p>
+            <p>글자의 가장 높은 부분에서 낮은 부분까지의 길이를 기준으로 한다.(글씨체에 따라 다르게 적용될 수 있다.)</p>
+            <p>브라우저에(html태그) 적용된 글씨 크기의 기본값은 16px이다.</p>
+            <p>브라우저(html태그)에 적용된 글씨크기를 1rem이라고 한다.</p>
+            <p>부모태그에 적용된 글씨 크기를 1em이라고 한다.</p>
+            <p>font-size속성은 글자와 관련된 속성이므로 상속된다.</p>
+        </li>
+        <li class="b">
+            <h2>line-height</h2>
+            <p>글씨를 감싸는 보이지 않는 라인의 높이(흔히 말하는 행간)</p>
+            <!-- 드래그했을 때 생기는 박스 -->
+            <!-- 보통 글자는 line-height의 중앙에 배치됨. 디폴트 기준 위 여백 폰트의 10%, 밑 여백 폰트의 10%(하지만 폰트에 따라 다름) -->
+            <p>line-height는 기본적으로 글씨크기의 120%만큼 설정되어 있다.</p>
+            <p>120%는 1.2라고 표현할 수 있다.</p>
+            <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nobis alias accusamus temporibus consequuntur velit voluptatibus ullam fuga eum id aliquam, at magnam, dolore, quibusdam quam obcaecati sapiente sint? Exercitationem.</p>
+        </li>
+        <li class="c">
+            <h2>font-weight</h2>
+            <p>글씨의 굵기 설정</p>
+            <p>사용하는 글씨체마다 호환되는 글씨의 굵기가 다르기 때문에 이를 잘 확인하여 사용(예: 배민도현체는 글씨가 굵은 글씨체밖에 없음)</p>
+            <ul>
+                <li>bold - 두껍게</li>
+                <li>normal - 일반(기본값)</li>
+                <li>lighter - 얇게</li>
+                <li>100~900까지 100 단위의 숫자를 사용해서 지정 가능 - 숫자가 커질수록 굵어짐(기본값 400)</li>
+            </ul>
+        </li>
+        <li class="d">
+            <h2>font-style</h2>
+            <p>글씨의 스타일을 지정할 때 사용</p>
+            <p>italic / normal</p>
+            <address>경기도 용인시 기흥구 죽전동</address>
+        </li>
+        <!-- 워드작업할 때처럼 폰트에 그런 선택지가 원래는 없어도 적용할 수 있음 -->
+        <li class="e">
+            <h2>letter-spacing</h2>
+            <p>글자와 글자 사이의 간격 설정(자간)</p>
+            <p>기본값 0 / 양수, 음수 가능</p>
+        </li>
+        <li class="f">
+            <h2>word-spacing</h2>
+            <p>단어와 단어 사이의 간격설정</p>
+        </li>
+        <li class="g">
+            <h2>white-space</h2>
+            <p>공백설정</p>
+            <ul>
+                <li>nowrap - 줄바꿈을 허용하지 않아서 한 줄로 출력된다.</li>
+                <li>pre - 텍스트가 쓰여진 대로 br태그가 없어도 줄바꿈을 허용시킴</li>
+                <li>기본값 : normal</li>
+            </ul>
+            <p class="nowrap">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, ullam repellat fugiat obcaecati, maiores quam soluta porro voluptatum vitae ut laboriosam earum explicabo ex sit sunt dolore, id labore quas.
+            </p>
+            <p class="pre">
+                Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit.
+                Accusantium quod ex sed fuga
+                natus iusto odio, pariatur
+                hic eveniet laborum
+                praesentium ipsam
+                veritatis, commodi
+                laboriosam reprehenderit
+                illum voluptas porro
+                aperiam!
+            </p>
+        </li>
+        <li class="h">
+            <h2>text-indent</h2>
+            <p>첫줄 들여쓰기 설정</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ipsum id error voluptatum possimus? Perspiciatis, assumenda magnam. Maxime blanditiis explicabo illum repellendus rerum incidunt ratione, tempore repellat. Commodi, dolorum iste!</p>
+        </li>
+        <li class="i">
+            <h2>text-decoration</h2>
+            <p>문장 꾸밈 설정</p>
+            <ul>
+                <li>underline - 밑줄 스타일
+                </li>
+                <li>
+                    <a href="#">none - 기존 스타일 제거</a>
+                </li>
+                <li>line-through - 취소선 스타일
+                </li>
+            </ul>
+        </li>
+        <li class="j">
+            <h2>text-align</h2>
+            <p>문단 정렬 설정 - 컨텐트 박스 안에서 컨텐츠들의 문단 정렬</p>
+            <ul>
+                <li>left(기본값) - 왼쪽 정렬</li>
+                <li>right - 오른쪽 정렬</li>
+                <li>center - 가운데정렬</li>
+                <li>justify - 양쪽정렬</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error deleniti, debitis unde repellat quidem, a, mollitia aspernatur accusantium autem repellendus ea. Perspiciatis ex eum facere velit fuga alias ratione voluptate.</p>
+        </li>
+        <li class="k">
+            <h2>text-transform</h2>
+            <p>영문자에 한해서 대문자 소문자로 변경</p>
+            <ul>
+                <li>uppercase - 대문자로 변경</li>
+                <li>lowercase - 소문자로 변경</li>
+                <li>capitalize - 앞문자만 대문자로 변경</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptate quis eaque alias laboriosam optio unde nisi temporibus eum sunt aliquam modi voluptatibus laudantium consequuntur, vero accusantium deleniti quas doloremque?</p>
+        </li>
+        <li class="l">
+            <h2>word-break</h2>
+            <p>단어 쪼개기 설정</p>
+            <ul>
+                <li>normal - 기본값</li>
+                <li>break-all - 무조건 쪼갬</li>
+                <li>keep-all - 무조건 안쪼갬</li>
+            </ul>
+            <p>기본 전제 - 장문이 있을 때 줄바꿈이 되는 순간에 단어가 쪼개지지 않게 줄바꿈이 된다. 이걸 쪼개지게 설정할 수 있도록 바꿀 수 있는 속성</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet et modi molestiae. Consectetur ea perspiciatis, odio eligendi doloribus numquam, iste maiores, animi quae suscipit quod maxime odit delectus omnis asperiores!</p>
+        </li>
+        <li class="m">
+            <h2>vertical - align</h2>
+            <p>인라인레벨태그끼리 수직정렬을 할 때 사용</p>
+            <p>기본값(baseline) top/bottom/middle</p>
+            <p>
+                <strong>strong-tag</strong><i>i-tag</i>
+            </p>
+        </li>
+    </ul>
+</body>
+</html>

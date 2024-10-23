@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>총정리</title>
+</head>
+<body>
+    <h1>문맥태그</h1>
+    <p>h1부터 h6까지의 태그는 제목태그임. 1에서 6까지 순차적으로 크기가 작아짐.</p>
+    <p>p태그는 본문내용에 쓰임.</p>
+    <p>br태그는 줄바꿈태그, hr태그는 구분선태그임. 얘네는 시작태그만 존재하는데, 단순히 기능으로서만 동작하기 때문에 중간에 들어갈 내용이 없기 때문임.</p>
+    <p>address 태그는 주소컨텐츠에 사용되고, blockquote태그는 인용글 컨텐츠에 사용됨</p>
+    <hr>
+    <h1>h1태그</h1>
+    <h2>h2태그</h2>
+    <h3>h3태그</h3>
+    <h4>h4태그</h4>
+    <h5>h5태그</h5>
+    <h6>h6태그</h6>
+    <address>address태그 - 주소컨텐츠</address>
+    <blockquote>blockquote태그 - 인용글컨텐츠</blockquote>
+    <br>
+    <br>
+
+    <h1>강조태그 및 특수문자태그</h1>
+    <p>b태그, strong태그는 강조태그임. 자동으로 줄바꿈되지 않기 때문에 아무데에나 써도 됨.</p>
+    <p>em태그, i태그는 이탤릭체 태그임.</p>
+    <p>sub태그는 아래첨자태그, sup태그는 위첨자태그. del태그는 취소선태그임. 특수문자를 쓸 때에는 &키워드;를 통해 구현할 수 있음. 인터넷에 검색해서 찾아 쓰기.</p>
+    <hr>
+    <p><b>강조</b>하는 말에는 <strong>이렇게</strong> b태그나, strong태그를 사용할 수 있다.</p>
+    <p><em>강조하는</em>방법에는 이 밖에도 <i>이탤릭체</i>로도 구현할 수 있는데, 이 때에는 em태그나 i태그를 사용한다.</p>
+    <p>이산화탄소는 CO<sub>2</sub>.</p>
+    <p>x<sup>2</sup>는 x제곱</p>
+    <p><del>인간</del>이 아닌 로봇&middot;ai</p>
+    <br>
+    <br>
+
+    <h1>속성 태그</h1>
+    <p>기본 형태는 <태그명 속성명="속성값">. 속성은 순서가 중요하지 않음.</p>
+    <p>span태그는 글자 하나하나에 속성을 부여할 때 사용함.</p>
+    <p>같은 기능끼리는 한 태그 안에 넣을 수 있지만, 다른 기능은 따로 부여해야 함. 같은 기능이라면 개수나 순서에 상관없이 작성할 수 있음. 중간에 띄어쓰기를 통해 구분함.</p>
+    <p>style="font-size:원하는 글자크기"는 폰트 사이즈를 바꾸는 속성임. style="color:#ffffff"는 색깔속성임. </p>
+    <hr>
+    <p style="font-size: 6rem;"><span style="color: burlywood;">사이즈</span>가 커졌다!</p>
+    <br>
+    <br>
+
+    <h1>링크태그</h1>
+    <h2>a태그와 속성</h2>
+    <p>a태그는 링크를 거는 태그임. a href="주소" 의 형태를 가지며 시작태그와 마침태그 사이에는 링크에 부여할 이름을 적음.</p>
+    <p>href 없이는 사용할 수 없고, 강조태그처럼 아무데서나 사용할 수 있음.</p>    
+    <p>a태그에서 target속성(창이 어디서 열릴건지) 기본값은 self로, 현재 탭에서 링크가 열리는 것임. 이것을 blank로 설정하면 새탭에서 링크가 열리게 됨.</p>
+    <p>title 속성은 클릭하기 전에 커서를 위에 올려두면 뜨는 안내창을 설정하는 속성임.</p>
+    <hr>
+    <a href="https://www.naver.com/" target="_blank">블랭크 속성을 적용한 네이버링크</a>
+    <a href="https://www.naver.com/">기본값(self)속성을 적용한 네이버 링크</a>
+    <a href="https://www.naver.com/" title="짜잔!">타이틀 속성을 적용한 네이버링크(커서를 올려보세요)</a>
+    <br>
+    <h2>경로입력방법</h2>
+    <p>경로는 절대경로와 상대경로로 나뉘는데, 일반 링크는 절대경로. 상대경로는 내 서버 안에 저장된 파일을 통해 사용하는 방식.</p>
+    <h4>상대경로</h4>
+    <p>. -> 현재 파일의 위치 불러오기</p>
+    <p>/ -> 폴더를 연다</p>
+    <p>.. -> 현재 파일의 상위 폴더 불러오기</p>
+    <hr>
+    <a href="../classes/c2_link/study1.html">수업시간에 했던 링크 html 자료</a>
+    <br>
+    <h2>a태그의 쓰임새</h2>
+    <p>파일 다운로드에 사용가능</p>
+    <p>스마트 기기에서 통화로 바로 연결시키기</p>
+    <p>목적지 페이지에서 추가적인 정보 요청(이것을 바로 쿼리스트링이라고 함. html 페이지 틀을 하나 만들어놓고, 그걸 활용해서 다양한 페이지를 구현할 때 사용됨)</p>
+    <p>버튼에도 사용됨</p>
+    <hr>
+    <a href="../classes/c2_link/source/source.zip">다운로드 링크 걸기</a>
+    <a href="tel:01039211233">나에게 전화걸기</a>
+    <a href="../profile/index.html?a=0303">쿼리스트링 넣기</a>
+    <br>
+    <br>
+    <h1>이미지태그</h1>
+    <p>img태그에 이미지파일을 연결해서 보여줄 수 있음. 대부분의 형태를 지원하지만, 브라우저마다 지원하는 이미지 확장자가 다르기 때문에 주로 사용하는 브라우저에 맞춰서 사용해야 함.</p>
+    <p>이미지 태그는 반드시 scr 속성과 alt 속성을 사용해야 함. </p>
+    <p>img src="상대경로" alt="대체텍스트"</p>
+    <p>이미지태그는 글자처럼 취급되므로 아무데나 쓸 수 있음.</p>
+    <p>이미지 사이즈를 너무 큰걸로 사용하면 용량이 너무 크기 때문에 적당한 것으로 골라야 함.</p>
+    <p>img태그에도 style속성을 사용할 수 있음. height 같은걸로 보이는 크기 줄이기 가능</p>
+    <hr>
+    <p>나는 <img src="./image/sleep.jpeg" alt="졸려 짤"> 졸리다.</p>
+    <p>나는 <img src="./image/sleep.jpeg" alt="졸려 짤" style="height: 20px;"> 20 px로 졸리다.</p>
+    <br>
+    <br>
+    <h1>비디오태그</h1>
+    <p>video태그도 이미지태그처럼 글자처럼 취급됨.</p>
+    <p>video src="상대경로"</p>
+    <p>자식태그로 <source src="상대경로" type="video/해당비디오 확장자"> 입력하면 여러가지 확장자를 자식태그로 넣어놔서 브라우저가 알아서 위에서부터 읽을 수 있는 확장자인지 확인 후 재생함. 소스를 여러개 넣어도 트래픽은 한개의 영상만 소모됨(한번만 다운로드 되기 때문)</p>
+    <h2>비디오태그 속성</h2>
+    <ul>
+        <li>속성 controls : 재생바가 생겨서 재생할 수 있음</li>
+        <li>속성 style="width:400px;" : 동영상 너비에 맞춰 크기 줄이기</li>
+        <li>속성 style="height:80px;" : 동영상 높이에 맞춰 크기 줄이기</li>
+        <li>속성 loop : 무한반복</li>
+        <li>속성 autoplay : 자동재생</li>
+        <li>속성 muted : 음소거</li>
+        <li>속성 poster="상대경로" : 썸네일</li>
+    </ul>
+    <hr>
+    <p>컨트롤러 활성화한 영상 -> <br> <video style="width: 400px;" src="./image/35693-407701673_tiny.mp4" controls></video></p>
+    <p>컨트롤러 활성화 및 무한반복한 영상 -> <br> <video style="width: 400px;" src="./image/35693-407701673_tiny.mp4" controls loop></video></p>
+    <p>컨트롤러 비활성화/무한반복/자동재생/음소거한 영상(자동재생 속성은 반드시 음소거 속성 같이 써야함) -> <br> <video style="width: 400px;" src="./image/35693-407701673_tiny.mp4" loop autoplay muted></video></p>
+    <p>썸네일 이미지 지정/컨트롤러 활성화한 영상 -> <br> <video style="width: 400px;" src="./image/35693-407701673_tiny.mp4" controls poster="./image/sleep.jpeg"></video></p>
+    <video style="width: 400px;" muted loop>
+        <source src="./image/35693-407701673_tiny.mp4" type="video/mp4">
+        <source src="./image/35693-407701673_tiny.mp4" type="video/mp4">
+    </video>
+    <br>
+    <br>
+
+    <h1>리스트태그</h1>
+    <h2>순서형 리스트 - ol</h2>
+    <p>리스트들 사이에 순서의 흐름이 있을 때 사용</p>
+    <p>자식태그 li 사용</p>
+    <hr>
+    <ol>
+        <li>일어난다.</li>
+        <li>씻는다.</li>
+        <li>준비한다.</li>
+        <li>나간다.</li>
+    </ol>
+    <br>
+    <h2>비순서형 리스트 - ul</h2>
+    <p>순서가 없을 때 사용</p>
+    <p>가장 많이 사용. 메뉴, 슬라이드 등</p>
+    <p>맥락별로 구분해서 사용</p>
+    <p>자식태그 li 사용</p>
+    <hr>
+    <ul>
+        <li>강아지</li>
+        <li>고양이</li>
+        <li>펭귄</li>
+        <li>참새</li>
+        <li>거북이</li>
+    </ul>
+    <br>
+    <h2>정의형 리스트 - dl</h2>
+    <p>한가지 주제에 대한 여러가지 정의 항목을 만들 때 사용</p>
+    <p>자식태그 dt(상위항목), dd(하위항목)</p>
+    <p>dt하나에 dd 여러개 올 수 있고, 항상 두개 다 와야함.</p>
+    <hr>
+    <dl>
+        <dt>상위항목1</dt>
+        <dd>상위항목1에 대한 하위항목1</dd>
+        <dd>상위항목1에 대한 하위항목2</dd>
+        <dt>상위항목2</dt>
+        <dd>상위항목2에 대한 하위항목1</dd>
+        <dd>상위항목2에 대한 하위항목2</dd>
+    </dl>
+    
+    <br>
+    <br>
+
+    <h1>표 태그</h1>
+    <p>table태그를 만들면 보이지 않는 표 공간이 만들어짐. 그 안에 컨텐츠를 입력하는 순서는 왼쪽에서 오른쪽으로. 첫번째 줄 태그를 먼저 모두 입력한 뒤 두번째 줄로 넘어가야 함.</p>
+    <p>셀 병합은 표를 다 만든 후 해야함. 병합이 시작되는 셀(가장 왼쪽, 가장 위쪽)을 찾아서 가로병합(colspan)/세로병합(rowspan) 속성을 사용. 이 때, 병합이 되어져서 사라지는 셀은 태그를 지워야 함.</p>
+    <ul>
+        <li>자식태그 caption : 표제목</li>
+        <li>자식태그 tr : 가로 행 만들기
+            <ul>
+                <li>tr의 자식태그 td : 가로행 안의 셀태그</li>
+                <li>tr의 자식태그 th : 가로행 안의 셀태그 중 분류기준(굵게, 가운데정렬)</li>
+            </ul>
+        </li>
+    </ul>
+    <p>table border="1" : 표의 선 굵기를 1로 설정하는 속성</p>
+    <hr>
+    <table border="1">
+        <tr>
+            <td></td>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </tr>
+        <tr>
+            <th>오전</th>
+            <td>휴무</td>
+            <td colspan="2">출근</td>
+            <td rowspan="2">휴무</td>
+            <td>출근</td>
+        </tr>
+        <tr>
+            <th>오후</th>
+            <td colspan="3">출근</td>
+            <td>휴무</td>
+        </tr>
+    </table>
+</body>
+</html>

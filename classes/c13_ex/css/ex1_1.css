@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* 밑에 패딩이랑 마진 등 수치가 정해져 있으므로 border-box로 작업 */
+    box-sizing: border-box;
+}
+
+/* 풀무원 폰트 등록 */
+@font-face{
+    font-family: "풀무원";
+    src: url(../font/PulmuoneLOHASBold.woff);
+}
+
+/* 노토산스 폰트 적용 font1 클래스 */
+.font1{
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 풀무원 폰트 적용 font2클래스 */
+.font2{
+    font-family: "풀무원";
+}
+
+.header{
+    /* 배경색, 이미지url, 반복x, 시작되는 곳의 x좌표 y좌표 /사진 짤리더라도 내 명령값 우선 */
+    background: white url(../img/sub_vis01_02.jpg) no-repeat 50% 50% /cover;
+    /* 사진 높이만 설정. 사진 너비를 설정하면 중앙으로 오지 않음 */
+    height: 250px;
+}
+
+.main{
+    
+}

@@ -1,0 +1,84 @@
+/* /////////공통 스타일///////// */
+
+h1{
+    text-align: center;
+}
+.boxwrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box{
+    /* border: 5px solid black; */
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box figcaption{
+    /* border: 1px solid red; */
+    position: absolute;
+    /* display : inline-block */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* absolute일때는 부모의 너비가 아닌 기준 영역의 너비의 n%를 뜻함. 부모가 relative가 아니면 조부모 또는 그 위일 수 있기 때문에 다른 경우의 width와는 다르다고 볼 수 있음. */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.507);
+    color: white;
+    font-size: 1.2rem;
+    opacity: 0;
+}
+.box:hover figcaption{
+    opacity: 1;
+}
+/* 박스클래스에 마우스오버를 했을 때 figcaption에게 이 태그를 설정한다. */
+
+
+/* ////////개별스타일///////// */
+
+
+.filter1 img{
+    filter: grayscale(0.6);
+    /* 흑백필터 : 괄호안의 숫자는 0~1 */
+}
+
+.filter2 img{
+    filter: brightness(0.5);
+    /* 빛필터 : 괄호안의 숫자는 0~1 (0은 아예 빛이 없음) */
+}
+
+.filter3 img{
+    filter: blur(20px);
+    /* 블러필터 */
+}
+
+.filter4 img{
+    filter: hue-rotate(180deg);
+    /* hue필터 */
+}
+.bg{
+    background-color: lightcoral;    
+}
+
+.mode1 img{
+    mix-blend-mode: color-burn;
+    /* 뒤에 lightcoral같은 background color가 있어야 효과가 나타남 */
+}
+
+.mode2 img{
+    mix-blend-mode: difference;
+}
+.mode3 img{
+    mix-blend-mode: overlay;
+}

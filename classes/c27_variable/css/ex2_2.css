@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 20px;
+}
+
+ul{
+    list-style: none;
+}
+
+.bmi{
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: 0 auto;
+    min-width: 800px;
+}
+
+.bmi h2{
+    background-color: #0aaf6b;
+    padding: 1rem;
+    color: white;
+}
+
+.bmi h2+p{
+    background-color: #efefef;
+    margin: 1rem;
+    padding: 1rem;
+    color: rgb(63, 63, 63);
+}
+
+.bmi h2+p+div{
+    border: 1px solid #efefef;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.result{
+    /* border: 1px solid red; */
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.result>dt{
+    width: 50%;
+}
+
+.result>dd{
+    width: 50%;
+    color: red;
+    font-weight: 600;
+}
+
+.bmibarList{
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+.bmibarList>li{
+    position: relative;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.bmibarList>li>span{
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%) translateX(50%);
+    color: black;
+}
+
+.bmibarList>li:nth-of-type(1){
+    flex: 1.4;
+    background-color: #329ae3;
+}
+
+.bmibarList>li:nth-of-type(2){
+    flex: 1.2;
+    background-color: #95c520;
+}
+
+.bmibarList>li:nth-of-type(3){
+    flex: 1;
+    background-color: #ee942a;
+}
+
+.bmibarList>li:nth-of-type(4){
+    flex: 2;
+    background-color: #f15232;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+info>dt, info>dd{
+    width: 25%;
+}

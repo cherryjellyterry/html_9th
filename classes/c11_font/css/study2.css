@@ -1,0 +1,37 @@
+@font-face{
+    font-family: "창원단감아삭";
+    /* 순수영어이름은 쌍따옴표 없이 쓸 수 있음
+    하지만 한국이름/띄어쓰기 등이 있으면 쌍따옴표 안에 써야함 */
+    src: url("../font/ChangwonDangamAsac-Bold_0712.ttf")
+}
+/* mac에서도 정상작동 하게 할려면 otf도 등록해야함. */
+@font-face{
+    font-family: "촵";
+    src: url(../font/chab.ttf)
+}
+@font-face{
+    font-family: "딱";
+    src: url(../font/ddag.ttf);
+}
+.dangam{
+    font-family: "창원단감아삭";
+}
+.chab{
+    font-family: "촵";
+}
+.ddag{
+    font-family: "딱";
+}
+.ptag{
+    font-family: "딱", "창원단감아삭", "촵", sans-serif;
+    /* 대안으로 3개를 놓는 것. sans-serif는 획이 없는 고딕체 계열로 적용한다는 뜻. serif는 획이 있는 명조체 계열로 적용한다는 뜻 */
+}
+.f20{
+    font-size: 20px;
+}
+.f30{
+    font-size: 30px;
+}
+.f20.f30{
+    font-size: 50px;
+}

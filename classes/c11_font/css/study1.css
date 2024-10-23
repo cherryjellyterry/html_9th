@@ -1,0 +1,88 @@
+.a{
+    font-size:20px;
+}
+.a p{
+    font-size: 2rem;
+    /* 2rem = 따로 html에 적용한 폰트크기가 없으므로 16x2, 즉 32px */
+    /* 밑에서 html에 12px 적용했으므로 이제는 12x2=24px */
+}
+.a p:nth-of-type(2n){
+    font-size: 2em;
+    /* 2em = 부모태그 설정값(20px)x2= 40px */
+    background: papayawhip;
+}
+html{
+    font-size:12px;
+}
+.desc{
+    line-height: 120%;
+    font-size: 2rem;
+    /* font-size: 24px, line-height: 28.8px */
+    line-height: 3;
+    /* 3=300% -> line-height: 72px. 물론 절대단위도 사용할 수 있음. 하지만 보통 상대단위를 사용(폰트사이즈에 따라 변경되므로) */
+    border: 1px solid black;
+    /* 컨텐트 박스의 크기는 72px x 3= 216px
+    테두리까지 포함해서 218px */
+}
+.c{
+    font-weight: bold;
+}
+.d{
+    font-style: italic;
+}
+.d address{
+    font-style: normal;
+}
+.e{
+    letter-spacing: 20px;
+}
+.e p:last-of-type{
+    /* 마지막 p태그 */
+    letter-spacing: -2px;
+}
+.f{
+    word-spacing: 30px;
+}
+.nowrap{
+    white-space: nowrap;
+}
+.pre{
+    white-space: pre;
+}
+.h>p:last-of-type{
+    text-indent: 50px;
+}
+.i ul>li:nth-of-type(1){
+    text-decoration: underline;
+}
+.i ul>li:nth-of-type(2) a{
+    text-decoration: none;
+}
+.i ul>li:nth-of-type(3){
+    text-decoration: line-through;
+}
+.j ul+p{
+    width: 400px;
+    border: 1px solid black;
+    text-align: justify;
+}
+.k ul+p{
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize;
+}
+.l>p:last-of-type{
+    border: 1px solid black;
+    word-break: break-all;
+    word-break: keep-all;
+    /* keep-all은 한중일 텍스트에서는 줄을 바꿀 때 단어를 끊지 않음. 다른 언어에서는 normal과 동일함. */
+}
+.m strong{
+    border: 1px solid red;
+    font-size: 5rem;
+}
+.m i{
+    font-size: 3rem;
+    border: 1px solid blue;
+    vertical-align: middle;
+}

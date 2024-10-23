@@ -1,0 +1,143 @@
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  /* 뒷 배경으로 이미지 넣을 수 있음 */
+  font-family: sans-serif;
+  /* 폰트 바꾸기 */
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.established {
+  font-style: italic;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+}
+
+img {
+  margin-top: -25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  height: 2px;
+  background-color: brown;
+  border-color: brown;
+}
+
+.bottom-line {
+  margin-top: 25px;
+}
+
+h1, h2 {
+  font-family: Impact, serif;
+/* 폰트를 정확히 지정 */
+}
+
+.item p {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.flavor, .dessert {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 14px;
+}
+
+.address {
+  margin-bottom: 5px;
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+/* 링크를 방문했을 때 폰트 컬러를 검은색으로 지정 */
+
+a:hover {
+  color: brown;
+}
+/* 링크 위에 포인터를 올리면 컬러가 갈색으로 보이게 */
+
+a:active {
+  color: brown;
+}
+/* 링크를 눌렀을 때 컬러가 갈색으로 보이게 */
+
+/* <<텍스트 정렬하기>>
+
+.flavor {
+  text-align: left;
+  width: 49%;
+}
+
+.price {
+  text-align: right;
+  width: 49%;
+}
+-> 각 값이 양 끝단으로 보내짐
+
+또는
+
+<p class="flavor">French Vanilla</p><p class="price">3.00</p>
+이렇게 html코드에서 p태그 두개를 연달아서 스페이스 없이 작성해놓고
+
+.flavor {
+  text-align: left;
+  width: 50%;
+}
+
+.price {
+  text-align: right;
+  width: 50%;
+}
+이렇게 할 수도 있음
+
+.flavor {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+이런식으로 비율을 바꿔도 상관 X (이건 50 50으로 설정했을 때 class flavor가 글자수가 더 많을 경우 브라우저의 크기가 줄어들면 둘째줄로 넘어갈 수 있으므로 비율을 적절히 조절해서 같은 줄에 들어갈 수 있게끔 조정하는 단계임) */

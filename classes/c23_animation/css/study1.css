@@ -1,0 +1,47 @@
+@keyframes my_rotate {
+    /* @keyframes 이름{} */
+    0%{
+        transform: rotate(0deg);
+    }
+    /* 시작할 때 스타일 */
+    100%{
+        transform: rotate(140deg);
+    }
+    /* 끝날 때 스타일 */
+}
+.box{
+    border: 5px solid black;
+    width: 300px;
+    height: 300px;
+}
+.ani1{
+    animation-name: my_rotate;
+    /* 무슨 애니메이션? 이름. */
+    animation-duration: 4s;
+    /* 지속시간 */
+    animation-timing-function: linear;
+    /* 속도감 */
+    animation-delay: -2s;
+    /* 딜레이 얼마나
+    -2s : 이미 2초 전에 시작했다는 뜻. 그러니까 시작이 50%부터 시작되는 것처럼 보임 */
+    animation-iteration-count: infinite;
+    /* 반복수 기본값 1(한번) 
+    infinite : 무한재생*/
+    animation-direction: alternate;
+    /* 재생 방향 
+    normal : 기본값
+    reverse : 100%->0%
+    alternate : 0% -> 100% -> 0% 
+    alternate-reverse : 100% -> 0% -> 100% */
+    animation-fill-mode: forwards;
+    /* 끝나고 나서의 생김새
+    기본값 : none (초기화면으로 복귀)
+    forwards : 끝난 상태 유지(100%의 시점)
+    backwards : 초기화면으로 복귀(0%의 시점) */
+    animation: my_rotate 4s linear 0s infinite alternate forwards;
+    /* 축약형 */
+}
+.ani1:hover{
+    animation-play-state: paused;
+    /* 마우스 올리면 멈춤 */
+}

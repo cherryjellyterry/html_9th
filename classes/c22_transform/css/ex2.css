@@ -1,0 +1,20 @@
+.box{
+    transition: all 1s ease 0s;
+    border: 5px solid black;
+    width: 300px;
+    height: 300px;
+    transform: 
+    translateX(100px)
+    translateY(100px)
+    rotate(30deg)
+    scale(0.6);
+    /* ,없이 이어쓰기 */
+}
+.mom:hover .box{
+    /* box를 선택해서 hover 넣어도 되는데 그냥 확실하게 선택이 풀리지 않게 하기 위해서 mom 클래스를 선택한 것 */
+    transform: 
+    translateX(0)
+    translateY(0)
+    rotate(0)
+    scale(1);
+}

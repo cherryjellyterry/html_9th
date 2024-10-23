@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box1{
+    border: 1px solid #000;
+}
+.box1>div{
+    border: 1px solid green;
+    display: inline-block;
+    width: 100px;
+}
+
+/* 이래서 display: inline-block으로는 레이아웃을 구성하지 않음. baseline을 기준으로 컨텐츠가 나열되기 때문에 위에서 아래로 읽는 특성상 맞지 않기 때문. */
+
+
+.box2{
+    border: 1px solid #000;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    /* 기본값 : row (가로축을 따라 왼->오 정렬) */
+    /* row-reverse : 가로축을 따라 오->왼 정렬 */
+    /* column : 세로축을 따라 위->아래 정렬 */
+    /* column-reverse : 세로축을 따라 아래->위 정렬 */
+    /* 메인축은 바꿔도 교차축은 못바꿈(row일 때는 메인축이 가로, 교차축이 세로. column일때는 메인축이 세로, 교차축이 가로) */
+    justify-content: flex-start;
+    /* justify~ : 메인축을 기준으로 어떻게 정렬할건지 */
+    /* 기본값 : flex-start(start 지점부터 나열) */
+    /* flex-end : end 지점에 붙게 나열. 하지만 end 지점에서 시작하는 것은 아님. 메인축의 방향은 유지. */
+    /* center : 중앙 정렬 */
+    /* space-between : 총 width 안에서 여백이 같게 정렬 */
+    /* space-around : 플렉스 아이템들 각각의 좌우 여백이 같게. 여백이 겹쳐지지 않음. */
+    align-items: center;
+    /* 기본값 : stretch(height에 맞춰 늘리기) */
+    /* flex-start : 교차축 기준 flex-start에 정렬 */
+    /* flex-end : 교차축 기준 flex-end에 정렬 */
+    /* center : 교차축 기준 중앙에 정렬 */
+    /* space-between이나 space-around는 없음 */
+    flex-wrap: wrap;
+    /* 기본값 : nowrap(흘러넘쳐도 줄바꿈 안됨) */
+    /* wrap : 줄바꿈이 됨 (줄바꿈이 되면 교차축이 n개가 됨) */
+    align-content: flex-start;
+    /* flex-start : wrap인 경우에 줄바꿈은 되지만 교차축이 하나로 유지. 뭉탱이로 옮겨다님. */
+}
+.box2>div{
+    border: 1px solid green;
+}
+.h100{
+    height: 100px;
+}
+.box3{
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 50vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+.box3>div{
+    border: 1px solid blue;
+    /* width: 200px; */
+    flex-basis: 200px;
+    /* no-wrap이 적용된 가변 flex-container 안의 flex-item의 width는 max-width처럼 창을 줄이면 같이 줄어들음. */
+    /* 이때 flex-basis = width (상황에 따라 다르겠지만 일단 너비를 정한다) */
+    /* wrap을 적용하면 너비를 줄이지 않고 줄바꿈을 함 */
+    flex-shrink: 1;
+    /* 기본값 : 1 */
+    /* 다같이 공평하게 같은 값으로 여백을 줄이는 것 */
+}
+.box2>div>:nth-of-type(1){
+    flex-shrink: 2;
+    /* 얘만 2배로 여백 줄이겠다는 뜻. */
+    /* 2:1:1:1:1의 비율로 여백 줄이겠다는 것임 */
+}
+
+.box4{
+    border: 10px solid red;
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 50vh;
+    display: flex;
+    height: 300px;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+.box4>div{
+    border: 1px solid blue;
+    flex-grow: 1;
+    /* flex-grow의 기본값 : 0 */
+    /* 남은 여백을 1:1:1:1:1 비율로 나눠가짐. 따라서 컨텐츠가 갖는 공간에 플러스로 여백을 갖기 때문에 각 칸의 너비가 같지 않음. */
+}
+.box4>div:nth-of-type(1){
+    flex-grow: 3;
+    /* 남은 여백을 3:1:1:1:1 비율로 나눠갖겠다는 뜻 */
+    order: 2;
+    align-self: flex-start;
+    /* 얘만 콕 집어서 교차축 어디에 배치할지 정할 수 있음 */
+}
+.box4>div:nth-of-type(2){
+    order: 1;
+    /* 기본값 : 0 */
+    /* 오더값이 높은게 더 뒤로 감 */
+    align-self: stretch;
+}
+.box5{
+    border: 10px solid black;
+    width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 50vh;
+}
+.side{
+    background: lightblue;
+    flex-basis: 200px;
+}
+.contents{
+    background: lightcoral;
+    flex-grow:1;
+}

@@ -1,0 +1,45 @@
+h1{
+    display: inline-block;
+}
+
+h1:hover{
+    background-color: blue;
+    color: white;
+}
+
+h1:active{
+    letter-spacing: 20px;
+    text-decoration: dashed;
+    color: yellow;
+}
+
+.hover:hover{
+    color: red;
+}
+
+p{
+    display: flex;
+    /* border: 1px solid gold; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+p:before{
+    content: "";
+    /* p태그의 자식태그 중 첫째가 될 애한테 무슨 내용 줄지 */
+    /* 반드시 before나 after는 content 속성을 입력해야만 함. 내용을 넣지 않더라도 반드시 있어야만 만들어짐.  */
+    /* border: 1px solid red; */
+    /* 얘는 display :inline임 */
+    width: 50px;
+    /* 부모가 flex를 했기 때문에 얘는 flex-item이 됐기 때문에 자동으로 inline-block으로 바뀐 상태 */
+    height: 50px;
+    background: url(../img/quote1.png) no-repeat 50% 50% /contain;
+}
+
+p:after{
+    content: "";
+    /* border: 1px solid blue; */
+    width: 50px;
+    height: 50px;
+    background: url(../img/quote2.png) no-repeat 50% 50% /contain;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수학</title>
+</head>
+<body>
+    <h1>수학계산관련 함수</h1>
+    <p>결과를 계산해서 함수가 사용되었던 자리에 결과값을 남긴다.</p>
+    <script>
+        console.log(Math.ceil(5.12314135))
+        // 올림 (6이 됨)
+        console.log(Math.round(5.12314135))
+        // 반올림 (5가 됨)
+        console.log(Math.floor(5.12314135))
+        // 버림 (5가 됨)
+        console.log(Math.pow(10,2))
+        // 제곱 (10의 2제곱 = 100이 됨)
+        console.log(Math.sqrt(100))
+        // 루트 (100의 루트값 = 양수만 나옴. 10)
+        console.log(Math.abs(-30))
+        // 절대값 (30이 됨)
+        console.log(Math.max(1,2,3,4,-5,5,6,-6,7,8,9,10))
+        // 최대값 (10이 됨)
+        console.log(Math.min(1,2,3,4,-5,5,6,-6,7,8,9,10))
+        // 최소값 (-6이 됨)
+        console.log(Math.random())
+        // 실행될때마다 0보다 크고 1보다 작은 랜덤값 (괄호안에 숫자 쓰는거 아님)
+        let dice = Math.ceil(Math.random()*6)
+        console.log(dice)
+        console.log("나폴리맛피아"[dice-1])
+    </script>
+</body>
+</html>

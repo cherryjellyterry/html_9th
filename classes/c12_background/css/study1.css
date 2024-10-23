@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.desc{
+    padding-bottom: 50px;
+    border-bottom: 5px solid #000;
+    margin-bottom: 50px;
+    font-size: 1.4;
+}
+.pre{
+    white-space: pre;
+}
+.prewrap{
+    white-space: pre-wrap;
+}
+.box{
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    box-sizing: border-box;
+}
+.box2{
+    height: 80vh;
+    margin: 100px 0;
+    background-color: bisque;
+    background-image: url(../img/jason-leung-AydnLKqj4Ug-unsplash.jpg);
+    background-repeat: no-repeat;
+    /* 기본값: repeat. 그래서 바둑판으로 계속 반복됨
+    repeat-x: x축으로만 반복. 밑은 배경색으로 깔림
+    repeat-y: y축으로만 반복
+    no-repeat: 반복안함*/
+    /* background-position: 100px 200px; */
+    /* 기본값: 0px 0px(x,y) */
+    /* background-position: 50% 0%; */
+    /* background-position: right top; */
+    /* center left right top bottom 등 */
+    background-position: calc(100% - 60px) calc(100% - 70px);
+    /* 계산식 calc() */
+    /* 부호 쓸 때 앞뒤로 띄어쓰기 해줘야 계산이 됨. */
+    /* 링크 url() */
+}
+.box3{
+    color : white;
+    height: 100vh;
+    background-color: aquamarine;
+    background-image: url(../img/jason-leung-AydnLKqj4Ug-unsplash.jpg);
+    background-repeat: no-repeat;
+    /* background-size: 300px auto; */
+    /* 가로 세로 */
+    /* background-size: auto 300px; */
+    /* background-size: 100% auto;
+    background-size: auto 100%; */
+    background-size: cover;
+    /* 화면 사이즈에 관계없이 자동으로 늘어나거나 줄어들면서 전체화면을 감쌈. 배경이미지가 잘려서 안보일 수도 있음. */
+    background-size: contain;
+    /* 이미지가 태그의 공간 안에 잘리지 않는 선에서 최대 크기로 들어가서 채우는 방식 */
+    background-position: center center;
+    background: aquamarine url(../img/jason-leung-AydnLKqj4Ug-unsplash.jpg) no-repeat 0 0 /cover;
+    /* 백그라운드 사이즈 쓸 때에는 앞에 / 써야함. */
+    /* 순서도 중요함 */
+    /* 대신 축약형으로 쓰면 다음에 background: red; 만 적용해도 다 없어지고 빨간배경됨. */
+}
+.box4{
+    border: 1px solid #fff;
+    width: 50vw;
+    height: 50vw;
+    /* height라고 vh를 써야하는게 아니고 화면 넓이의 50퍼의 수치를 적용하고 싶으면 vw 쓰면됨*/
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background: rgb(255, 187, 0) url(../img/jason-leung-AydnLKqj4Ug-unsplash.jpg) no-repeat 50% 50% /cover;
+    background-attachment: fixed;
+    /* 이미지를 화면에 고정시켜놓고 배경박스가 마치 클리핑마스크처럼 내가 볼 수 있는 부분이 바뀌는 거 */
+}
+.box4.blend{
+    background-blend-mode:multiply;
+}
+.blur{
+    /* border: 1px solid red; */
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+    -webkit-backdrop-filter: blur(10px);
+    /* 비표준css속성이면 앞에 -webkit- 작성하여 사용 가능 */
+    backdrop-filter: blur(10px);
+    /* 비표준CSS속성 : 어떤 브라우저에서는 적용되지 않을 수 있음 */
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>freeCodeCamp Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- 타이틀 -->
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <!-- 간단한 소개 -->
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <!-- 폼 -->
+    <form id=survey-form>
+      <fieldset class="a">
+        <!-- 이름 -->
+        <label for="name" id="name-label">
+        Name
+        <input id="name" required placeholder="Enter your name" type="text">
+        </label>
+      </fieldset>
+      <fieldset class="b">
+      <!-- 이메일 -->
+       <label for="email" id="email-label">
+        Email
+         <input id="email" required type="email" placeholder="Enter your Email">
+       </label>
+      </fieldset>
+      <fieldset class="c">
+      <!-- 나이 -->
+      <label for="number" id="number-label">
+        Age <span class="small">(optional)</span>
+        <input id="number" type="number" min="10" max="99" placeholder="Age">
+      </label>
+      </fieldset>
+      <fieldset class="d">
+      <!-- 직업 -->
+        <label for="dropdown">
+        Which option best describes your current role?
+          <select id="dropdown">
+            <option selected disabled>Select current role</option>
+            <option value="student">
+            Student
+            </option>
+            <option value="fulltimejob">
+            Full Time Job
+            </option>
+            <option value="fulltimelearner">
+            Full Time Learner
+            </option>
+            <option value="no">
+            Prefer not to say
+            </option>
+            <option value="other">
+            Other
+            </option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset class="e">
+        <!-- 추천할건지 -->
+        <span id="question">
+        Would you recommend freeCodeCamp to a friend?
+        </span>
+        <label for="definitely">
+        <input id="definitely" class="inline" type="radio" name="friend" value="ga"> Definitely
+        </label>
+        <label for="maybe">
+        <input id="maybe" class="inline" type="radio" name="friend" value="na">
+        Maybe
+        </label>
+        <label for="notsure">
+        <input id="notsure" class="inline" type="radio" name="friend" value="da">
+        Not sure
+        </label>
+      </fieldset>
+      <fieldset class="f">
+        <!-- 뭐가 좋은지 -->
+        <label for="favorite">
+        What is your favorite feature of freeCodeCamp?
+         <select id="favorite">
+           <option selected disabled>Select an option</option>
+            <option value="a">Challenges</option>
+            <option value="b">Projects</option>
+            <option value="c">Community</option>
+            <option value="d">Open Source</option>
+         </select>
+       </label>
+      </fieldset>
+      <fieldset class="g">
+        <!-- 뭐가 발전했는지 -->
+        <span class="question">What would you like to see improved?</span><span class="small">(Check all that apply)</span>
+        <label for="front-end"><input type="checkbox" value="11" id="front-end">Front-end Projects</label>
+        <label for="back-end"><input type="checkbox" value="12" id="back-end">Back-end Projects</label>
+        <label for="data"><input type="checkbox" value="13" id="data">Data Visualization</label>
+        <label for="challenges"><input type="checkbox" value="14" id="challenges">Challenges</label>
+        <label for="open-source"><input type="checkbox" value="15" id="open-source">Open Source Community</label>
+        <label for="gitter"><input type="checkbox" value="16" id="gitter">Gitter help rooms</label>
+        <label for="videos"><input type="checkbox" value="17" id="videos">Videos</label>
+        <label for="meetups"><input type="checkbox" value="18" id="meetups">City Meetups</label>
+        <label for="wiki"><input type="checkbox" value="19" id="wiki">Wiki</label>
+        <label for="forum"><input type="checkbox" value="20" id="forum">Forum</label>
+        <label for="additional"><input type="checkbox" value="21" id="additional">Additional Courses</label>
+        </fieldset>
+      <fieldset class="h">
+        <label for="comments">Any comments or suggestions?<textarea id="comments"> Enter your comment here...</textarea>
+        </label>
+        </fieldset>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>

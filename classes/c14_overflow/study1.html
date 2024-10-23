@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <link rel="stylesheet" href="./css/study1.css">
+</head>
+<body>
+    <h1>overflow</h1>
+    <p>태그의 컨텐트박스 안에 있는 컨텐츠들이 양이 많아서 컨텐트 박스 바깥으로 흘러 넘치는 경우에 대비하기 위한 속성</p>
+    <p>전제조건 : 태그의 height가 고정되어 있을 때(기본값 auto가 아닐 때)</p>
+    <p>태그들은 위에서 아래로 거꾸로 하는 테트리스의 블럭처럼 배치가 된다. 이 때 태그의 경계선(border)을 기준으로 쌓이게 된다.</p>
+    <p>태그의 경계선(border)은 컨텐트 박스를 포함하는 만큼 그려지기 때문에, 높이가 고정이 된 상태에서 컨텐츠가 흘러 넘치게 된다면 인접한 두개의 태그에서 보여지는 컨텐츠 글자들이 겹쳐져서 가독성이 떨어질 가능성이 있다. 바로 아래와 같은 경우이다.</p>
+    <div class="box">
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia obcaecati neque fuga nostrum expedita tempore debitis dolore ea, porro laboriosam praesentium impedit aspernatur eligendi quos consequatur quasi aliquid officiis adipisci?</section>
+        <section>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta blanditiis dolorem recusandae ullam amet laborum quos fugit tempora laboriosam, totam iure nesciunt voluptates aliquam dolorum quo labore suscipit corrupti! Asperiores.</section>
+    </div>
+    <p class="desc hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, corrupti. Temporibus placeat quia expedita voluptates error tenetur, minus sunt pariatur enim facilis ipsum, nobis aliquid architecto consequatur dignissimos fugiat vel?</p>
+    <p class="desc scroll">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, possimus, quaerat quos accusamus cumque quasi ut ratione deserunt in quis enim laborum dolore excepturi pariatur totam voluptas, numquam odio voluptate.</p>
+    <p class="desc over_y">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus modi voluptatum perspiciatis mollitia illo nihil alias delectus deserunt accusamus, impedit est sapiente corrupti voluptatem eligendi ratione similique expedita! Natus, fuga.</p>
+    <p class="desc over_x">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eius optio temporibus sed, assumenda dignissimos. Recusandae dolor suscipit dolores? Voluptate cupiditate minus sint iusto, facere sequi fugiat dicta beatae possimus!</p>
+    <p class="desc auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio esse, doloribus quia eius hic id sint dolores. Tenetur sequi optio itaque vero id enim, assumenda aliquid praesentium necessitatibus illum! Quis!</p>
+    <p class="desc visible">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum quo facere ut asperiores, necessitatibus accusamus doloremque delectus nesciunt nihil dignissimos quis magnam ea quos aperiam laudantium veritatis quae dolorem! Odit!</p>
+</body>
+</html>

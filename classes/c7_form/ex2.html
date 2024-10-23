@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam 로그인 예제</title>
+</head>
+<body>
+    <div class="register">
+        <form action="#">
+            <h2>CREATE YOUR ACCOUNT</h2>
+            <div class="email">
+                <label for="user_email">Email Address</label> <br>
+                <input type="text" id="user_email" required>
+            </div>
+            <div class="email_check">
+                <label for="user_email_check">Confirm your Address</label>
+                <br>
+                <input type="text" id="user_email_check" required>
+            </div>
+            <div class="country">
+                <label for="user_country">Country of Residence</label>
+                <br>
+                <select id="user_country">
+                    <option value="Korea">Korea, Republic of</option>
+                    <option value="USA">United of America</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Japan">Japan</option>
+                </select>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="confirm_check">
+                <label for="confirm_check">I am 13 years of age or older and agree to the terms of the <strong>Steam Subscriber Agreement</strong> and the <strong>Valve Privacy Policy</strong>.</label>
+            </div>
+            <button type="submit">Continue</button>
+        </form>
+    </div>
+</body>
+</html>
